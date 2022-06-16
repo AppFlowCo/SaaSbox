@@ -7,180 +7,180 @@ html(lang='en')
     meta(name='author' content)
     link(rel='preconnect' href='https://fonts.gstatic.com')
     link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap')
-    link(rel='stylesheet' href='css/tailwind/tailwind.min.css')
+    link(rel='stylesheet' href=asset('css/tailwind/tailwind.min.css'))
     link(rel='icon' type='image/png' sizes='16x16' href='favicon-tailwind.png')
-    script(src='js/main.js')
+    script(src=asset('js/main.js'))
   body.antialiased.bg-body.text-body.font-body
     div
       section.bg-white
         nav.flex.justify-between.p-6.px-4
           .flex.justify-between.items-center.w-full
-            .xl:w-1/3
+            .xl_w-1_3
               a.block.max-w-max(href='#')
-                img.h-8(src='flex-ui-assets/logos/flex-ui-green-light.svg' alt)
-            .hidden.xl:block.xl:w-1/3
+                img.h-8(src=asset('flex-ui-assets/logos/flex-ui-green-light.svg') alt)
+            .hidden.xl_block.xl_w-1_3
               ul.flex.justify-center
                 li.mr-12
-                  a.text-coolGray-500.hover:text-coolGray-900.font-medium(href='#') Product
+                  a.text-coolGray-500.hover_text-coolGray-900.font-medium(href='#') Product
                 li.mr-12
-                  a.text-coolGray-500.hover:text-coolGray-900.font-medium(href='#') Features
+                  a.text-coolGray-500.hover_text-coolGray-900.font-medium(href='#') Features
                 li.mr-12
-                  a.text-coolGray-500.hover:text-coolGray-900.font-medium(href='#') Resources
+                  a.text-coolGray-500.hover_text-coolGray-900.font-medium(href='#') Resources
                 li
-                  a.text-coolGray-500.hover:text-coolGray-900.font-medium(href='#') Pricing
-            .hidden.xl:block.xl:w-1/3
+                  a.text-coolGray-500.hover_text-coolGray-900.font-medium(href='#') Pricing
+            .hidden.xl_block.xl_w-1_3
               .flex.items-center.justify-end
-                a.inline-block.py-2.px-4.mr-2.leading-5.text-coolGray-500.hover:text-coolGray-900.bg-transparent.font-medium.rounded-md(href='#') Log In
-                a.inline-block.py-2.px-4.text-sm.leading-5.text-green-50.bg-green-500.hover:bg-green-600.font-medium.focus:ring-2.focus:ring-green-500.focus:ring-opacity-50.rounded-md(href='#') Sign Up
-          button.navbar-burger.self-center.xl:hidden
+                a.inline-block.py-2.px-4.mr-2.leading-5.text-coolGray-500.hover_text-coolGray-900.bg-transparent.font-medium.rounded-md(href='#') Log In
+                a.inline-block.py-2.px-4.text-sm.leading-5.text-green-50.bg-green-500.hover_bg-green-600.font-medium.focus_ring-2.focus_ring-green-500.focus_ring-opacity-50.rounded-md(href='#') Sign Up
+          button.navbar-burger.self-center.xl_hidden
             svg(width='35' height='35' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg')
               rect.text-coolGray-50(width='32' height='32' rx='6' fill='currentColor')
               path.text-coolGray-500(d='M7 12H25C25.2652 12 25.5196 11.8946 25.7071 11.7071C25.8946 11.5196 26 11.2652 26 11C26 10.7348 25.8946 10.4804 25.7071 10.2929C25.5196 10.1054 25.2652 10 25 10H7C6.73478 10 6.48043 10.1054 6.29289 10.2929C6.10536 10.4804 6 10.7348 6 11C6 11.2652 6.10536 11.5196 6.29289 11.7071C6.48043 11.8946 6.73478 12 7 12ZM25 15H7C6.73478 15 6.48043 15.1054 6.29289 15.2929C6.10536 15.4804 6 15.7348 6 16C6 16.2652 6.10536 16.5196 6.29289 16.7071C6.48043 16.8946 6.73478 17 7 17H25C25.2652 17 25.5196 16.8946 25.7071 16.7071C25.8946 16.5196 26 16.2652 26 16C26 15.7348 25.8946 15.4804 25.7071 15.2929C25.5196 15.1054 25.2652 15 25 15ZM25 20H7C6.73478 20 6.48043 20.1054 6.29289 20.2929C6.10536 20.4804 6 20.7348 6 21C6 21.2652 6.10536 21.5196 6.29289 21.7071C6.48043 21.8946 6.73478 22 7 22H25C25.2652 22 25.5196 21.8946 25.7071 21.7071C25.8946 21.5196 26 21.2652 26 21C26 20.7348 25.8946 20.4804 25.7071 20.2929C25.5196 20.1054 25.2652 20 25 20Z' fill='currentColor')
         .navbar-menu.hidden.fixed.top-0.left-0.z-50.w-full.h-full.bg-coolGray-900.bg-opacity-50
-          .fixed.top-0.left-0.bottom-0.w-full.w-4/6.max-w-xs.bg-white
+          .fixed.top-0.left-0.bottom-0.w-full.w-4_6.max-w-xs.bg-white
             nav.relative.p-6.h-full.overflow-y-auto
               .flex.flex-col.justify-between.h-full
                 a.inline-block(href='#')
-                  img.h-8(src='flex-ui-assets/logos/flex-ui-green-light.svg' alt)
+                  img.h-8(src=asset('flex-ui-assets/logos/flex-ui-green-light.svg') alt)
                 ul.py-6
                   li
-                    a.block.py-3.px-4.text-coolGray-500.hover:text-coolGray-900.font-medium.hover:bg-coolGray-50.rounded-md(href='#') Product
+                    a.block.py-3.px-4.text-coolGray-500.hover_text-coolGray-900.font-medium.hover_bg-coolGray-50.rounded-md(href='#') Product
                   li
-                    a.block.py-3.px-4.text-coolGray-500.hover:text-coolGray-900.font-medium.hover:bg-coolGray-50.rounded-md(href='#') Features
+                    a.block.py-3.px-4.text-coolGray-500.hover_text-coolGray-900.font-medium.hover_bg-coolGray-50.rounded-md(href='#') Features
                   li
-                    a.block.py-3.px-4.text-coolGray-500.hover:text-coolGray-900.font-medium.hover:bg-coolGray-50.rounded-md(href='#') Pricing
+                    a.block.py-3.px-4.text-coolGray-500.hover_text-coolGray-900.font-medium.hover_bg-coolGray-50.rounded-md(href='#') Pricing
                   li
-                    a.block.py-3.px-4.text-coolGray-500.hover:text-coolGray-900.font-medium.hover:bg-coolGray-50.rounded-md(href='#') Resources
+                    a.block.py-3.px-4.text-coolGray-500.hover_text-coolGray-900.font-medium.hover_bg-coolGray-50.rounded-md(href='#') Resources
                 .flex.flex-wrap
                   .w-full.mb-2
-                    a.inline-block.py-2.px-4.w-full.text-sm.leading-5.text-coolGray-500.hover:text-coolGray-900.bg-transparent.font-medium.text-center.rounded-md(href='#') Log In
+                    a.inline-block.py-2.px-4.w-full.text-sm.leading-5.text-coolGray-500.hover_text-coolGray-900.bg-transparent.font-medium.text-center.rounded-md(href='#') Log In
                   .w-full
-                    a.inline-block.py-2.px-4.w-full.text-sm.leading-5.text-white.bg-green-500.hover:bg-green-600.font-medium.text-center.focus:ring-2.focus:ring-green-500.focus:ring-opacity-50.rounded-md(href='#') Sign Up
+                    a.inline-block.py-2.px-4.w-full.text-sm.leading-5.text-white.bg-green-500.hover_bg-green-600.font-medium.text-center.focus_ring-2.focus_ring-green-500.focus_ring-opacity-50.rounded-md(href='#') Sign Up
             a.navbar-close.absolute.top-5.p-4.right-3(href='#')
               svg(width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg')
                 path(d='M6.94004 6L11.14 1.80667C11.2656 1.68113 11.3361 1.51087 11.3361 1.33333C11.3361 1.1558 11.2656 0.985537 11.14 0.860002C11.0145 0.734466 10.8442 0.66394 10.6667 0.66394C10.4892 0.66394 10.3189 0.734466 10.1934 0.860002L6.00004 5.06L1.80671 0.860002C1.68117 0.734466 1.51091 0.663941 1.33337 0.663941C1.15584 0.663941 0.985576 0.734466 0.860041 0.860002C0.734505 0.985537 0.66398 1.1558 0.66398 1.33333C0.66398 1.51087 0.734505 1.68113 0.860041 1.80667L5.06004 6L0.860041 10.1933C0.797555 10.2553 0.747959 10.329 0.714113 10.4103C0.680267 10.4915 0.662842 10.5787 0.662842 10.6667C0.662842 10.7547 0.680267 10.8418 0.714113 10.9231C0.747959 11.0043 0.797555 11.078 0.860041 11.14C0.922016 11.2025 0.99575 11.2521 1.07699 11.2859C1.15823 11.3198 1.24537 11.3372 1.33337 11.3372C1.42138 11.3372 1.50852 11.3198 1.58976 11.2859C1.671 11.2521 1.74473 11.2025 1.80671 11.14L6.00004 6.94L10.1934 11.14C10.2554 11.2025 10.3291 11.2521 10.4103 11.2859C10.4916 11.3198 10.5787 11.3372 10.6667 11.3372C10.7547 11.3372 10.8419 11.3198 10.9231 11.2859C11.0043 11.2521 11.0781 11.2025 11.14 11.14C11.2025 11.078 11.2521 11.0043 11.286 10.9231C11.3198 10.8418 11.3372 10.7547 11.3372 10.6667C11.3372 10.5787 11.3198 10.4915 11.286 10.4103C11.2521 10.329 11.2025 10.2553 11.14 10.1933L6.94004 6Z' fill='#556987')
-      section.py-20.xl:py-24.bg-white.overflow-hidden(style='background-image: url(\'flex-ui-assets/elements/pattern-white.svg\'); background-position: center;')
+      section.py-20.xl_py-24.bg-white.overflow-hidden(style='background-image: url(\'flex-ui-assets/elements/pattern-white.svg\'); background-position: center;')
         .container.px-4.mx-auto
           .text-center
             span.inline-block.py-px.px-2.mb-4.text-xs.leading-5.text-green-500.bg-green-100.font-medium.uppercase.rounded-9xl Pricing
-            h3.mb-4.text-3xl.md:text-5xl.text-coolGray-900.font-bold.tracking-tighter Flexible pricing plan for your startup
-            p.mb-6.text-lg.md:text-xl.text-coolGray-500.font-medium Pricing that scales with your business immediately.
+            h3.mb-4.text-3xl.md_text-5xl.text-coolGray-900.font-bold.tracking-tighter Flexible pricing plan for your startup
+            p.mb-6.text-lg.md_text-xl.text-coolGray-500.font-medium Pricing that scales with your business immediately.
             .flex.mb-12.mx-auto.max-w-max.border.border-coolGray-200.overflow-hidden.rounded-md.shadow-lg
               a.py-3.px-5.text-sm.text-green-500.bg-white.font-medium.border-r.border-coolGray-200(href='#') Billed Monthly
               a.py-3.px-5.text-sm.text-coolGray-500.bg-coolGray-50.font-medium(href='#') Billed Annually
           .flex.flex-wrap.justify-center.-mx-4
-            .w-full.md:w-1/2.p-4
-              .flex.flex-col.pt-8.pb-8.bg-coolGray-50.rounded-md.shadow-md.hover:scale-105.transition.duration-500
+            .w-full.md_w-1_2.p-4
+              .flex.flex-col.pt-8.pb-8.bg-coolGray-50.rounded-md.shadow-md.hover_scale-105.transition.duration-500
                 .flex.items-center.justify-between.px-8
                   div
-                    h3.text-2xl.md:text-3xl.text-coolGray-800.font-semibold.tracking-tighter Basic plan
+                    h3.text-2xl.md_text-3xl.text-coolGray-800.font-semibold.tracking-tighter Basic plan
                     p.text-coolGray-400.font-medium For bigger teams
                   div
                     span.relative.-top-10.right-1.text-3xl.text-coolGray-900.font-bold $
                     |  
-                    span.text-6xl.md:text-7xl.text-coolGray-900.font-semibold.tracking-tighter 99
+                    span.text-6xl.md_text-7xl.text-coolGray-900.font-semibold.tracking-tighter 99
                     |  
                     span.inline-block.ml-1.text-coolGray-500.font-semibold /mo
                 .border-b.border-coolGray-100
                 ul.self-start.px-8.pt-8.pb-16
                   li.flex.items-center.mb-4.text-coolGray-500.font-medium
-                    img.mr-3(src='flex-ui-assets/elements/pricing/checkbox-green.svg')
+                    img.mr-3(src=asset('flex-ui-assets/elements/pricing/checkbox-green.svg'))
                     span Access to all features
                   li.flex.items-center.mb-4.text-coolGray-500.font-medium
-                    img.mr-3(src='flex-ui-assets/elements/pricing/checkbox-green.svg')
+                    img.mr-3(src=asset('flex-ui-assets/elements/pricing/checkbox-green.svg'))
                     span Assisted onboarding support
                   li.flex.items-center.mb-4.text-coolGray-500.font-medium
-                    img.mr-3(src='flex-ui-assets/elements/pricing/checkbox-green.svg')
+                    img.mr-3(src=asset('flex-ui-assets/elements/pricing/checkbox-green.svg'))
                     span CPM Overage: Unlimited
                   li.flex.items-center.text-coolGray-500.font-medium
-                    img.mr-3(src='flex-ui-assets/elements/pricing/checkbox-green.svg')
+                    img.mr-3(src=asset('flex-ui-assets/elements/pricing/checkbox-green.svg'))
                     span Program reviews 1x a month
                 .border-b.border-coolGray-100
                 .px-8.pt-8
-                  a.inline-block.py-4.px-7.w-full.text-base.md:text-lg.leading-6.text-green-50.font-medium.text-center.bg-green-500.hover:bg-green-600.focus:ring-2.focus:ring-green-500.focus:ring-opacity-50.rounded-md.shadow-sm(href='#') Get Started Now
-            .w-full.md:w-1/2.p-4
-              .flex.flex-col.pt-8.pb-8.bg-coolGray-50.rounded-md.shadow-md.hover:scale-105.transition.duration-500
+                  a.inline-block.py-4.px-7.w-full.text-base.md_text-lg.leading-6.text-green-50.font-medium.text-center.bg-green-500.hover_bg-green-600.focus_ring-2.focus_ring-green-500.focus_ring-opacity-50.rounded-md.shadow-sm(href='#') Get Started Now
+            .w-full.md_w-1_2.p-4
+              .flex.flex-col.pt-8.pb-8.bg-coolGray-50.rounded-md.shadow-md.hover_scale-105.transition.duration-500
                 .flex.items-center.justify-between.px-8
                   div
-                    h3.text-2xl.md:text-3xl.text-coolGray-800.font-semibold.tracking-tighter Lifetime
+                    h3.text-2xl.md_text-3xl.text-coolGray-800.font-semibold.tracking-tighter Lifetime
                     p.text-coolGray-400.font-medium Unlimited possibilities
                   div
                     span.relative.-top-10.right-1.text-3xl.text-coolGray-900.font-bold $
                     |  
-                    span.text-6xl.md:text-7xl.text-coolGray-900.font-semibold.tracking-tighter 189
+                    span.text-6xl.md_text-7xl.text-coolGray-900.font-semibold.tracking-tighter 189
                     |  
                     span.inline-block.ml-1.text-coolGray-500.font-semibold /mo
                 .border-b.border-coolGray-100
                 ul.self-start.px-8.pt-8.pb-16
                   li.flex.items-center.mb-4.text-coolGray-500.font-medium
-                    img.mr-3(src='flex-ui-assets/elements/pricing/checkbox-green.svg')
+                    img.mr-3(src=asset('flex-ui-assets/elements/pricing/checkbox-green.svg'))
                     span Access to all features
                   li.flex.items-center.mb-4.text-coolGray-500.font-medium
-                    img.mr-3(src='flex-ui-assets/elements/pricing/checkbox-green.svg')
+                    img.mr-3(src=asset('flex-ui-assets/elements/pricing/checkbox-green.svg'))
                     span Assisted onboarding support
                   li.flex.items-center.mb-4.text-coolGray-500.font-medium
-                    img.mr-3(src='flex-ui-assets/elements/pricing/checkbox-green.svg')
+                    img.mr-3(src=asset('flex-ui-assets/elements/pricing/checkbox-green.svg'))
                     span CPM Overage: Unlimited
                   li.flex.items-center.text-coolGray-500.font-medium
-                    img.mr-3(src='flex-ui-assets/elements/pricing/checkbox-green.svg')
+                    img.mr-3(src=asset('flex-ui-assets/elements/pricing/checkbox-green.svg'))
                     span Program reviews 1x a month
                 .border-b.border-coolGray-100
                 .px-8.pt-8
-                  a.inline-block.py-4.px-7.w-full.text-base.md:text-lg.leading-6.text-green-50.font-medium.text-center.bg-green-500.hover:bg-green-600.focus:ring-2.focus:ring-green-500.focus:ring-opacity-50.rounded-md.shadow-sm(href='#') Get Started Now
+                  a.inline-block.py-4.px-7.w-full.text-base.md_text-lg.leading-6.text-green-50.font-medium.text-center.bg-green-500.hover_bg-green-600.focus_ring-2.focus_ring-green-500.focus_ring-opacity-50.rounded-md.shadow-sm(href='#') Get Started Now
       section.pt-24.bg-white(style='background-image: url(\'flex-ui-assets/elements/pattern-white.svg\'); background-position: center;')
         .container.px-4.mx-auto
           .max-w-4xl.mb-16
             span.inline-block.py-px.px-2.mb-4.text-xs.leading-5.text-green-500.bg-green-100.font-medium.rounded-full.shadow-sm FAQ
-            h2.mb-4.text-4xl.md:text-5xl.leading-tight.text-coolGray-900.font-bold.tracking-tighter Frequently Asked Questions
-            p.text-lg.md:text-xl.text-coolGray-500.font-medium Flex is the only saas business platform that lets you run your business on one platform, seamlessly across all digital channels.
+            h2.mb-4.text-4xl.md_text-5xl.leading-tight.text-coolGray-900.font-bold.tracking-tighter Frequently Asked Questions
+            p.text-lg.md_text-xl.text-coolGray-500.font-medium Flex is the only saas business platform that lets you run your business on one platform, seamlessly across all digital channels.
           .flex.flex-wrap.pb-16.-mx-4
-            .w-full.md:w-1/2.xl:w-1/3.px-4.mb-8
-              .md:max-w-xs
+            .w-full.md_w-1_2.xl_w-1_3.px-4.mb-8
+              .md_max-w-xs
                 .inline-flex.mb-6.items-center.justify-center.w-12.h-12.rounded-full.bg-green-500
-                  img(src='flex-ui-assets/elements/faq/shield-icon.svg' alt)
+                  img(src=asset('flex-ui-assets/elements/faq/shield-icon.svg') alt)
                 h3.mb-6.text-xl.text-coolGray-900.font-bold What shipping options do you have?
                 p.text-coolGray-500.font-medium For USA domestic orders we offer FedEx and USPS shipping. Contact us via email to learn more.
-            .w-full.md:w-1/2.xl:w-1/3.px-4.mb-8
-              .md:max-w-xs
+            .w-full.md_w-1_2.xl_w-1_3.px-4.mb-8
+              .md_max-w-xs
                 .inline-flex.mb-6.items-center.justify-center.w-12.h-12.rounded-full.bg-green-500
-                  img(src='flex-ui-assets/elements/faq/shield-icon.svg' alt)
+                  img(src=asset('flex-ui-assets/elements/faq/shield-icon.svg') alt)
                 h3.mb-6.text-xl.text-coolGray-900.font-bold What payment methods do you accept?
                 p.text-coolGray-500.font-medium Any method of payments acceptable by you. For example: We accept MasterCard, Visa.
-            .w-full.md:w-1/2.xl:w-1/3.px-4.mb-8
-              .md:max-w-xs
+            .w-full.md_w-1_2.xl_w-1_3.px-4.mb-8
+              .md_max-w-xs
                 .inline-flex.mb-6.items-center.justify-center.w-12.h-12.rounded-full.bg-green-500
-                  img(src='flex-ui-assets/elements/faq/shield-icon.svg' alt)
+                  img(src=asset('flex-ui-assets/elements/faq/shield-icon.svg') alt)
                 h3.mb-6.text-xl.text-coolGray-900.font-bold How long does it take to ship my order?
                 p.text-coolGray-500.font-medium Orders are usually shipped within 1-2 business days after placing the order.
-            .w-full.md:w-1/2.xl:w-1/3.px-4.mb-8.xl:mb-0
-              .md:max-w-xs
+            .w-full.md_w-1_2.xl_w-1_3.px-4.mb-8.xl_mb-0
+              .md_max-w-xs
                 .inline-flex.mb-6.items-center.justify-center.w-12.h-12.rounded-full.bg-green-500
-                  img(src='flex-ui-assets/elements/faq/shield-icon.svg' alt)
+                  img(src=asset('flex-ui-assets/elements/faq/shield-icon.svg') alt)
                 h3.mb-6.text-xl.text-coolGray-900.font-bold What shipping options do you have?
                 p.text-coolGray-500.font-medium For USA domestic orders we offer FedEx and USPS shipping. Contact us via email to learn more.
-            .w-full.md:w-1/2.xl:w-1/3.px-4.mb-8.md:mb-0
-              .md:max-w-xs
+            .w-full.md_w-1_2.xl_w-1_3.px-4.mb-8.md_mb-0
+              .md_max-w-xs
                 .inline-flex.mb-6.items-center.justify-center.w-12.h-12.rounded-full.bg-green-500
-                  img(src='flex-ui-assets/elements/faq/shield-icon.svg' alt)
+                  img(src=asset('flex-ui-assets/elements/faq/shield-icon.svg') alt)
                 h3.mb-6.text-xl.text-coolGray-900.font-bold What payment methods do you accept?
                 p.text-coolGray-500.font-medium Any method of payments acceptable by you. For example: We accept MasterCard, Visa.
-            .w-full.md:w-1/2.xl:w-1/3.px-4
-              .md:max-w-xs
+            .w-full.md_w-1_2.xl_w-1_3.px-4
+              .md_max-w-xs
                 .inline-flex.mb-6.items-center.justify-center.w-12.h-12.rounded-full.bg-green-500
-                  img(src='flex-ui-assets/elements/faq/shield-icon.svg' alt)
+                  img(src=asset('flex-ui-assets/elements/faq/shield-icon.svg') alt)
                 h3.mb-6.text-xl.text-coolGray-900.font-bold How long does it take to ship my order?
                 p.text-coolGray-500.font-medium Orders are usually shipped within 1-2 business days after placing the order.
-          .relative.-mb-40.py-16.px-4.md:px-8.lg:px-16.bg-coolGray-800.rounded-md.overflow-hidden
-            img.absolute.top-0.left-0.h-full.w-full.object-cover(src='flex-ui-assets/elements/pattern-dark.svg' alt)
+          .relative.-mb-40.py-16.px-4.md_px-8.lg_px-16.bg-coolGray-800.rounded-md.overflow-hidden
+            img.absolute.top-0.left-0.h-full.w-full.object-cover(src=asset('flex-ui-assets/elements/pattern-dark.svg') alt)
             .relative.max-w-max.mx-auto.text-center
-              h3.mb-2.text-2xl.md:text-5xl.leading-tight.font-bold.text-white.tracking-tighter Have any additional questions?
-              p.mb-6.text-base.md:text-xl.text-coolGray-400 Flex is a Small SaaS Business. Flex isn’t a traditional company.
-              a.inline-flex.items-center.justify-center.px-7.py-3.h-14.w-full.md:w-auto.mb-2.md:mb-0.md:mr-4.text-lg.leading-7.text-green-50.bg-green-500.hover:bg-green-600.font-medium.focus:ring-2.focus:ring-green-500.focus:ring-opacity-50.border.border-transparent.rounded-md.shadow-sm(href='#') Get in touch
+              h3.mb-2.text-2xl.md_text-5xl.leading-tight.font-bold.text-white.tracking-tighter Have any additional questions?
+              p.mb-6.text-base.md_text-xl.text-coolGray-400 Flex is a Small SaaS Business. Flex isn’t a traditional company.
+              a.inline-flex.items-center.justify-center.px-7.py-3.h-14.w-full.md_w-auto.mb-2.md_mb-0.md_mr-4.text-lg.leading-7.text-green-50.bg-green-500.hover_bg-green-600.font-medium.focus_ring-2.focus_ring-green-500.focus_ring-opacity-50.border.border-transparent.rounded-md.shadow-sm(href='#') Get in touch
         .h-64.bg-green-500
       section.bg-white(style='background-image: url(\'flex-ui-assets/elements/pattern-white.svg\'); background-position: center;')
         .container.px-4.mx-auto
           .pt-24.pb-11.mx-auto.max-w-4xl
-            a.block.md:mx-auto.mb-5.max-w-max(href='#')
+            a.block.md_mx-auto.mb-5.max-w-max(href='#')
               svg.text-green-500(width='95' height='32' viewBox='0 0 95 32' fill='none' xmlns='http://www.w3.org/2000/svg')
                 path.text-coolGray-900(d='M54.3157 6.71125V10.2982H46.8277V14.1731H52.4306V17.6552H46.8277V25.0909H42.3506V6.71125H54.3157Z' fill='currentColor')
                 path.text-coolGray-900(d='M61.1459 5.71634V25.0909H56.6688V5.71634H61.1459Z' fill='currentColor')
@@ -189,23 +189,23 @@ html(lang='en')
                 path(d='M14.626 9.94598C19.0055 11.4917 23.7285 11.4058 28.0651 9.73131C28.108 7.97092 27.6357 6.21053 26.8199 4.62189L26.3906 3.76316C26.2618 3.8061 26.09 3.89198 26.0041 3.97785C22.054 5.86705 17.5886 6.12467 13.4238 4.6219C10.5042 3.59143 7.32687 3.84904 4.57895 5.223L3.72023 5.65236C3.76316 5.78117 3.84904 5.95291 3.93492 6.03878C4.45015 7.15513 4.87951 8.35735 5.18006 9.6025C8.1856 8.74377 11.5346 8.82964 14.626 9.94598Z' fill='currentColor')
                 path(d='M3.93493 22.8698L4.87952 22.3546C6.7935 21.3976 8.90498 20.9343 11 20.9954C12.2888 21.033 13.5713 21.269 14.7978 21.7105C15.1973 21.8523 15.5981 21.9824 16 22.1011V26.6777C14.3376 26.3686 12.6547 26.3245 11 26.5375C9.28349 26.7585 7.59733 27.2562 5.99586 28.0221C5.90999 28.108 5.73824 28.1939 5.60943 28.2368L5.18007 27.3781C4.45015 25.9612 4.0208 24.4155 3.93493 22.8698Z' fill='currentColor')
                 path(d='M4.45002 18.9197C8.0996 17.4169 12.1786 17.2881 15.914 18.6191C19.3489 19.8213 22.9985 20.036 26.4334 19.2631C26.3905 17.331 26.6481 15.4418 27.3351 13.5526C22.8267 14.8836 17.9749 14.7548 13.4666 13.1662C10.8905 12.2216 8.05667 12.2216 5.48049 13.0803C5.52343 14.9266 5.17995 16.8158 4.5359 18.662C4.5359 18.662 4.49296 18.7909 4.45002 18.9197Z' fill='currentColor')
-            .flex.flex-wrap.justify-center.-mx-3.lg:-mx-6
-              .w-full.md:w-auto.p-3.md:px-6
-                a.inline-block.text-lg.md:text-xl.text-coolGray-500.hover:text-coolGray-600.font-medium(href='#') Product
-              .w-full.md:w-auto.p-3.md:px-6
-                a.inline-block.text-lg.md:text-xl.text-coolGray-500.hover:text-coolGray-600.font-medium(href='#') Features
-              .w-full.md:w-auto.p-3.md:px-6
-                a.inline-block.text-lg.md:text-xl.text-coolGray-500.hover:text-coolGray-600.font-medium(href='#') Pricing
-              .w-full.md:w-auto.p-3.md:px-6
-                a.inline-block.text-lg.md:text-xl.text-coolGray-500.hover:text-coolGray-600.font-medium(href='#') Resources
-              .w-full.md:w-auto.p-3.md:px-6
-                a.inline-block.text-lg.md:text-xl.text-coolGray-500.hover:text-coolGray-600.font-medium(href='#') Careers
-              .w-full.md:w-auto.p-3.md:px-6
-                a.inline-block.text-lg.md:text-xl.text-coolGray-500.hover:text-coolGray-600.font-medium(href='#') Help
-              .w-full.md:w-auto.p-3.md:px-6
-                a.inline-block.text-lg.md:text-xl.text-coolGray-500.hover:text-coolGray-600.font-medium(href='#') Privacy
+            .flex.flex-wrap.justify-center.-mx-3.lg_-mx-6
+              .w-full.md_w-auto.p-3.md_px-6
+                a.inline-block.text-lg.md_text-xl.text-coolGray-500.hover_text-coolGray-600.font-medium(href='#') Product
+              .w-full.md_w-auto.p-3.md_px-6
+                a.inline-block.text-lg.md_text-xl.text-coolGray-500.hover_text-coolGray-600.font-medium(href='#') Features
+              .w-full.md_w-auto.p-3.md_px-6
+                a.inline-block.text-lg.md_text-xl.text-coolGray-500.hover_text-coolGray-600.font-medium(href='#') Pricing
+              .w-full.md_w-auto.p-3.md_px-6
+                a.inline-block.text-lg.md_text-xl.text-coolGray-500.hover_text-coolGray-600.font-medium(href='#') Resources
+              .w-full.md_w-auto.p-3.md_px-6
+                a.inline-block.text-lg.md_text-xl.text-coolGray-500.hover_text-coolGray-600.font-medium(href='#') Careers
+              .w-full.md_w-auto.p-3.md_px-6
+                a.inline-block.text-lg.md_text-xl.text-coolGray-500.hover_text-coolGray-600.font-medium(href='#') Help
+              .w-full.md_w-auto.p-3.md_px-6
+                a.inline-block.text-lg.md_text-xl.text-coolGray-500.hover_text-coolGray-600.font-medium(href='#') Privacy
         .border-b.border-coolGray-100
         .container.px-4.mx-auto
-          p.py-10.md:pb-20.text-lg.md:text-xl.text-coolGray-400.font-medium.text-center © 2021 Flex. All rights reserved.
+          p.py-10.md_pb-20.text-lg.md_text-xl.text-coolGray-400.font-medium.text-center © 2021 Flex. All rights reserved.
     script(src='https://cdn.jsdelivr.net/npm/apexcharts')
-    script(src='js/charts-demo.js')
+    script(src=asset('js/charts-demo.js'))
