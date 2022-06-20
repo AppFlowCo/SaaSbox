@@ -3,7 +3,7 @@ mixin navbar()
     .flex.justify-between.items-center.w-full
       .w-1_2.xl_w-1_3
         a.block.max-w-max(href='/')
-          img.h-8(src=thisApp.ImageUrl) alt)
+          img.h-8(src=thisApp.ImageUrl, alt)
       .w-1_2.xl_w-1_3
         ul.hidden.xl_flex.xl_justify-center
           li.mr-12
@@ -27,7 +27,7 @@ mixin navbar()
       nav.relative.p-6.h-full.overflow-y-auto
         .flex.flex-col.justify-between.h-full
           a.inline-block(href='/')
-            img.h-8(src=thisApp.ImageUrl) alt)
+            img.h-8(src=thisApp.ImageUrl, alt)
           ul.py-6
             li
               a.block.py-3.px-4.text-coolGray-500.hover_text-coolGray-900.font-medium.hover_bg-coolGray-50.rounded-md(href='#') Product
