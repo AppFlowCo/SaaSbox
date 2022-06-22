@@ -21,7 +21,8 @@ mixin navbar()
             a.inline-block.py-2.px-4.text-sm.leading-5.text-green-50.bg-green-500.hover_bg-green-600.font-medium.focus_ring-2.focus_ring-green-500.focus_ring-opacity-50.rounded-md(href='/signup') Sign Up
       else
         .w-1_2.xl_w-1_3
-          .hidden.xl_flex.flex-wrap.items-center.-m-3
+          //-.hidden.xl_flex.flex-wrap.items-center.-m-3
+          .hidden.xl_flex.items-center.justify-end
             .w-auto.p-3
               .flex.flex-wrap.items-center.-m-2
                 .w-auto.p-2
@@ -34,10 +35,6 @@ mixin navbar()
                       .w-auto.p-2
                         h2.text-sm.font-semibold.text-coolGray-800 #{currentUser.firstname} #{currentUser.lastname}
                         p.text-sm.font-medium.text-coolGray-500 #{currentUser.email}
-                .w-auto.p-2
-                  a.block.max-w-max.text-coolGray-500.hover_text-coolGray-600(href='#')
-                    svg(width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
-                      path(d='M17 9.17C16.8126 8.98375 16.5592 8.87921 16.295 8.87921C16.0308 8.87921 15.7774 8.98375 15.59 9.17L12 12.71L8.46001 9.17C8.27265 8.98375 8.0192 8.87921 7.75501 8.87921C7.49082 8.87921 7.23737 8.98375 7.05001 9.17C6.95628 9.26297 6.88189 9.37357 6.83112 9.49543C6.78035 9.61729 6.75421 9.74799 6.75421 9.88C6.75421 10.012 6.78035 10.1427 6.83112 10.2646C6.88189 10.3864 6.95628 10.497 7.05001 10.59L11.29 14.83C11.383 14.9237 11.4936 14.9981 11.6154 15.0489C11.7373 15.0997 11.868 15.1258 12 15.1258C12.132 15.1258 12.2627 15.0997 12.3846 15.0489C12.5064 14.9981 12.617 14.9237 12.71 14.83L17 10.59C17.0937 10.497 17.1681 10.3864 17.2189 10.2646C17.2697 10.1427 17.2958 10.012 17.2958 9.88C17.2958 9.74799 17.2697 9.61729 17.2189 9.49543C17.1681 9.37357 17.0937 9.26297 17 9.17Z' fill='currentColor')
                 a.inline-block.py-2.px-4.text-sm.leading-5.text-green-50.bg-green-500.hover_bg-green-600.font-medium.focus_ring-2.focus_ring-green-500.focus_ring-opacity-50.rounded-md(href='/logout') Logout
     button.navbar-burger.self-center.xl_hidden
       svg(width='35' height='35' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg')
