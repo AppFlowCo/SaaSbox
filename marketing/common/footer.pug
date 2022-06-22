@@ -1,0 +1,26 @@
+mixin footer()
+  section.bg-white(style='background-image: url(\'flex-ui-assets/elements/pattern-white.svg\'); background-position: center;')
+    .container.px-4.mx-auto
+      .pt-24.pb-11.mx-auto.max-w-4xl
+        a.block.md_mx-auto.mb-5.max-w-max(href='#')
+          img.mb-3.h-12(src=thisApp.ImageUrl, alt width='auto')
+        .flex.flex-wrap.justify-center.-mx-3.lg_-mx-6
+          .w-full.md_w-auto.p-3.md_px-6
+            a.inline-block.text-lg.md_text-xl.text-coolGray-500.hover_text-coolGray-600.font-medium(href='#') Product
+          .w-full.md_w-auto.p-3.md_px-6
+            a.inline-block.text-lg.md_text-xl.text-coolGray-500.hover_text-coolGray-600.font-medium(href='#') Features
+          .w-full.md_w-auto.p-3.md_px-6
+            a.inline-block.text-lg.md_text-xl.text-coolGray-500.hover_text-coolGray-600.font-medium(href='#') Pricing
+          .w-full.md_w-auto.p-3.md_px-6
+            a.inline-block.text-lg.md_text-xl.text-coolGray-500.hover_text-coolGray-600.font-medium(href='#') Resources
+          .w-full.md_w-auto.p-3.md_px-6
+            a.inline-block.text-lg.md_text-xl.text-coolGray-500.hover_text-coolGray-600.font-medium(href='#') Careers
+          .w-full.md_w-auto.p-3.md_px-6
+            a.inline-block.text-lg.md_text-xl.text-coolGray-500.hover_text-coolGray-600.font-medium(href='#') Help
+          .w-full.md_w-auto.p-3.md_px-6
+            a.inline-block.text-lg.md_text-xl.text-coolGray-500.hover_text-coolGray-600.font-medium(href='#') Privacy
+    .border-b.border-coolGray-100
+    .container.px-4.mx-auto
+      p.py-10.md_pb-20.text-lg.md_text-xl.text-coolGray-400.font-medium.text-center © #{new Date().getFullYear()} #{thisApp.name}. All rights reserved.
+    script(src='https://cdn.jsdelivr.net/npm/apexcharts')
+    script(src=asset('js/charts-demo.js'))
