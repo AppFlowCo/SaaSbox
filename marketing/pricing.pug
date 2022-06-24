@@ -36,7 +36,8 @@ html(lang='en')
                           span.relative.-top-10.right-1.text-3xl.text-coolGray-900.font-bold $
                           span.text-6xl.md_text-7xl.text-coolGray-900.font-semibold.tracking-tighter #{plan.price_per_period}
                         - let period = plan.billing_period.slice(0,-2)
-                        span.inline-block.ml-1.text-coolGray-500.font-semibold /#{period}
+                        if !plan.is_free
+                          span.inline-block.ml-1.text-coolGray-500.font-semibold /#{period}
                     .border-b.border-coolGray-100
                     ul.self-start.px-8.pt-8.pb-16
                       - for (let i = 0; i < 10; i++)
