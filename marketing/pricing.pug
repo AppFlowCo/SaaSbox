@@ -13,67 +13,46 @@ html(lang='en')
             h3.mb-4.text-3xl.md_text-5xl.text-coolGray-900.font-bold.tracking-tighter Flexible pricing plan for your startup
             p.mb-6.text-lg.md_text-xl.text-coolGray-500.font-medium Pricing that scales with your business immediately.
             .flex.mb-12.mx-auto.max-w-max.border.border-coolGray-200.overflow-hidden.rounded-md.shadow-lg
-              a.py-3.px-5.text-sm.text-green-500.bg-white.font-medium.border-r.border-coolGray-200(href='#') Billed Monthly
-              a.py-3.px-5.text-sm.text-coolGray-500.bg-coolGray-50.font-medium(href='#') Billed Annually
-          .flex.flex-wrap.justify-center.-mx-4
-            .w-full.md_w-1_2.p-4
-              .flex.flex-col.pt-8.pb-8.bg-coolGray-50.rounded-md.shadow-md.hover_scale-105.transition.duration-500
-                .flex.items-center.justify-between.px-8
-                  div
-                    h3.text-2xl.md_text-3xl.text-coolGray-800.font-semibold.tracking-tighter Basic plan
-                    p.text-coolGray-400.font-medium For bigger teams
-                  div
-                    span.relative.-top-10.right-1.text-3xl.text-coolGray-900.font-bold $
-                    |  
-                    span.text-6xl.md_text-7xl.text-coolGray-900.font-semibold.tracking-tighter 99
-                    |  
-                    span.inline-block.ml-1.text-coolGray-500.font-semibold /mo
-                .border-b.border-coolGray-100
-                ul.self-start.px-8.pt-8.pb-16
-                  li.flex.items-center.mb-4.text-coolGray-500.font-medium
-                    img.mr-3(src=asset('flex-ui-assets/elements/pricing/checkbox-green.svg'))
-                    span Access to all features
-                  li.flex.items-center.mb-4.text-coolGray-500.font-medium
-                    img.mr-3(src=asset('flex-ui-assets/elements/pricing/checkbox-green.svg'))
-                    span Assisted onboarding support
-                  li.flex.items-center.mb-4.text-coolGray-500.font-medium
-                    img.mr-3(src=asset('flex-ui-assets/elements/pricing/checkbox-green.svg'))
-                    span CPM Overage: Unlimited
-                  li.flex.items-center.text-coolGray-500.font-medium
-                    img.mr-3(src=asset('flex-ui-assets/elements/pricing/checkbox-green.svg'))
-                    span Program reviews 1x a month
-                .border-b.border-coolGray-100
-                .px-8.pt-8
-                  a.inline-block.py-4.px-7.w-full.text-base.md_text-lg.leading-6.text-green-50.font-medium.text-center.bg-green-500.hover_bg-green-600.focus_ring-2.focus_ring-green-500.focus_ring-opacity-50.rounded-md.shadow-sm(href='#') Get Started Now
-            .w-full.md_w-1_2.p-4
-              .flex.flex-col.pt-8.pb-8.bg-coolGray-50.rounded-md.shadow-md.hover_scale-105.transition.duration-500
-                .flex.items-center.justify-between.px-8
-                  div
-                    h3.text-2xl.md_text-3xl.text-coolGray-800.font-semibold.tracking-tighter Lifetime
-                    p.text-coolGray-400.font-medium Unlimited possibilities
-                  div
-                    span.relative.-top-10.right-1.text-3xl.text-coolGray-900.font-bold $
-                    |  
-                    span.text-6xl.md_text-7xl.text-coolGray-900.font-semibold.tracking-tighter 189
-                    |  
-                    span.inline-block.ml-1.text-coolGray-500.font-semibold /mo
-                .border-b.border-coolGray-100
-                ul.self-start.px-8.pt-8.pb-16
-                  li.flex.items-center.mb-4.text-coolGray-500.font-medium
-                    img.mr-3(src=asset('flex-ui-assets/elements/pricing/checkbox-green.svg'))
-                    span Access to all features
-                  li.flex.items-center.mb-4.text-coolGray-500.font-medium
-                    img.mr-3(src=asset('flex-ui-assets/elements/pricing/checkbox-green.svg'))
-                    span Assisted onboarding support
-                  li.flex.items-center.mb-4.text-coolGray-500.font-medium
-                    img.mr-3(src=asset('flex-ui-assets/elements/pricing/checkbox-green.svg'))
-                    span CPM Overage: Unlimited
-                  li.flex.items-center.text-coolGray-500.font-medium
-                    img.mr-3(src=asset('flex-ui-assets/elements/pricing/checkbox-green.svg'))
-                    span Program reviews 1x a month
-                .border-b.border-coolGray-100
-                .px-8.pt-8
-                  a.inline-block.py-4.px-7.w-full.text-base.md_text-lg.leading-6.text-green-50.font-medium.text-center.bg-green-500.hover_bg-green-600.focus_ring-2.focus_ring-green-500.focus_ring-opacity-50.rounded-md.shadow-sm(href='#') Get Started Now
+              if plans.length > 0 && plans[0].billing_period == "monthly"
+                a.py-3.px-5.text-sm.text-green-500.bg-white.font-medium.border-r.border-coolGray-200(href='/pricing') Billed Monthly
+                a.py-3.px-5.text-sm.text-coolGray-500.bg-coolGray-50.font-medium(href='/pricing-yearly') Billed Annually
+              else
+                a.py-3.px-5.text-sm.text-coolGray-500.bg-coolGray-50.font-medium(href='/pricing') Billed Monthly
+                a.py-3.px-5.text-sm.text-green-500.bg-white.font-medium.border-r.border-coolGray-200(href='/pricing-yearly') Billed Annually
+          form(action="/pick-plan", method="POST")
+            .flex.flex-wrap.justify-center.-mx-4
+              for plan in plans
+                .w-full.md_w-1_2.p-4
+                  .flex.flex-col.pt-8.pb-8.bg-coolGray-50.rounded-md.shadow-md.hover_scale-105.transition.duration-500
+                    .flex.items-center.justify-between.px-8
+                      div
+                        h3.text-2xl.md_text-3xl.text-coolGray-800.font-semibold.tracking-tighter #{plan.name}
+                        p.text-coolGray-400.font-medium #{plan.description}
+                      div
+                        if plan.is_free
+                          span.relative.-top-10.right-1.text-3xl.text-coolGray-900.font-bold
+                          span.text-6xl.md_text-7xl.text-coolGray-900.font-semibold.tracking-tighter Free
+                        else
+                          span.relative.-top-10.right-1.text-3xl.text-coolGray-900.font-bold $
+                          span.text-6xl.md_text-7xl.text-coolGray-900.font-semibold.tracking-tighter #{plan.price_per_period}
+                        - let period = plan.billing_period.slice(0,-2)
+                        span.inline-block.ml-1.text-coolGray-500.font-semibold /#{period}
+                    .border-b.border-coolGray-100
+                    ul.self-start.px-8.pt-8.pb-16
+                      - for (let i = 0; i < 10; i++)
+                        if plan.features.text[i]
+                          li.flex.items-center.mb-4.text-coolGray-500.font-medium
+                            img.mr-3(src=asset('flex-ui-assets/elements/pricing/checkbox-green.svg'))
+                            span #{plan.features.text[i]}
+                    .border-b.border-coolGray-100
+                    .px-8.pt-8
+                      //- This section handles button behavior for picking or upgrading/downgrading plans, or showing current plan status.
+                      if (currentUser && currentUser.appUser.PlanId == plan.id)
+                        button(name="planId", value=plan.id, data-track-name=plan.name, data-track-price=plan.price_per_period, data-track-period=plan.billing_period).inline-block.py-4.px-7.w-full.text-base.md_text-lg.leading-6.text-green-50.font-medium.text-center.bg-green-500.hover_bg-green-600.focus_ring-2.focus_ring-green-500.focus_ring-opacity-50.rounded-md.shadow-sm.track-init_checkout_plan Your Current Plan
+                      else if (currentUser && currentUser.appUser.PlanId)
+                        button(name="planId", value=plan.id, data-track-name=plan.name, data-track-price=plan.price_per_period, data-track-period=plan.billing_period).inline-block.py-4.px-7.w-full.text-base.md_text-lg.leading-6.text-green-50.font-medium.text-center.bg-green-500.hover_bg-green-600.focus_ring-2.focus_ring-green-500.focus_ring-opacity-50.rounded-md.shadow-sm.track-init_checkout_plan Switch to this plan
+                      else
+                        button(name="planId", value=plan.id, data-track-name=plan.name, data-track-price=plan.price_per_period, data-track-period=plan.billing_period).inline-block.py-4.px-7.w-full.text-base.md_text-lg.leading-6.text-green-50.font-medium.text-center.bg-green-500.hover_bg-green-600.focus_ring-2.focus_ring-green-500.focus_ring-opacity-50.rounded-md.shadow-sm.track-init_checkout_plan #{plan.cta}
       section.pt-24.bg-white(style='background-image: url(\'flex-ui-assets/elements/pattern-white.svg\'); background-position: center;')
         .container.px-4.mx-auto
           .max-w-4xl.mb-16
