@@ -17,16 +17,24 @@ html(lang='en')
             form(action='/signup' method='POST')
               .mb-6
                 label.block.mb-2.text-coolGray-800.font-medium(for) Firstname*
-                input.appearance-none.block.w-full.p-3.leading-5.text-coolGray-900.border.border-coolGray-200.rounded-lg.shadow-md.placeholder-coolGray-400.focus_outline-none.focus_ring-2.focus_ring-green-500.focus_ring-opacity-50(type='name', name='firstname', placeholder='Patryk')
+                input.appearance-none.block.w-full.p-3.leading-5.text-coolGray-900.border.border-coolGray-200.rounded-lg.shadow-md.placeholder-coolGray-400.focus_outline-none.focus_ring-2.focus_ring-green-500.focus_ring-opacity-50(type='name', name='firstname', placeholder='John')
               .mb-6
                 label.block.mb-2.text-coolGray-800.font-medium(for) Lastname*
-                input.appearance-none.block.w-full.p-3.leading-5.text-coolGray-900.border.border-coolGray-200.rounded-lg.shadow-md.placeholder-coolGray-400.focus_outline-none.focus_ring-2.focus_ring-green-500.focus_ring-opacity-50(type='name', name='lastname', placeholder='Patryk')
+                input.appearance-none.block.w-full.p-3.leading-5.text-coolGray-900.border.border-coolGray-200.rounded-lg.shadow-md.placeholder-coolGray-400.focus_outline-none.focus_ring-2.focus_ring-green-500.focus_ring-opacity-50(type='name', name='lastname', placeholder='Doe')
               .mb-6
                 label.block.mb-2.text-coolGray-800.font-medium(for) Email*
-                input.appearance-none.block.w-full.p-3.leading-5.text-coolGray-900.border.border-coolGray-200.rounded-lg.shadow-md.placeholder-coolGray-400.focus_outline-none.focus_ring-2.focus_ring-green-500.focus_ring-opacity-50(type='name', name='email' placeholder='dev@shuffle.dev')
+                input.appearance-none.block.w-full.p-3.leading-5.text-coolGray-900.border.border-coolGray-200.rounded-lg.shadow-md.placeholder-coolGray-400.focus_outline-none.focus_ring-2.focus_ring-green-500.focus_ring-opacity-50(type='name', name='email' placeholder='user@email.com')
+              if errors && errors.email
+                .mb-4
+                  .flex-1.p-2
+                    h3.font-medium.text-sm.text-red-900 #{errors.email}
               .mb-4
                 label.block.mb-2.text-coolGray-800.font-medium(for) Password*
                 input.appearance-none.block.w-full.p-3.leading-5.text-coolGray-900.border.border-coolGray-200.rounded-lg.shadow-md.placeholder-coolGray-400.focus_outline-none.focus_ring-2.focus_ring-green-500.focus_ring-opacity-50(type='password', name='password', placeholder='************')
+              if errors && errors.password
+                .mb-4
+                  .flex-1.p-2
+                    h3.font-medium.text-sm.text-red-900 #{errors.password}
               .flex.flex-wrap.items-center.justify-between.mb-6
                 .w-full.md_w-1_2
                   label.relative.inline-flex.items-center
@@ -36,8 +44,8 @@ html(lang='en')
                 .w-full.md_w-auto.mt-1
                   a.inline-block.text-xs.font-medium.text-green-500.hover_text-green-600(href='#') Forgot your password?
               button.inline-block.py-3.px-7.mb-4.w-full.text-base.text-green-50.font-medium.text-center.leading-6.bg-green-500.hover_bg-green-600.focus_ring-2.focus_ring-green-500.focus_ring-opacity-50.rounded-md.shadow-sm(type="submit") Sign Up
-              |  
-              if add_google_login_condition_here
+              |
+              if google_callback
                 a.inline-flex.items-center.justify-center.py-3.px-7.mb-6.w-full.text-base.text-coolGray-500.font-medium.text-center.leading-6.bg-white.border.border-coolGray-100.hover_border-coolGray-200.rounded-md.shadow-sm(href='#')
                   img.mr-2(src=asset('flex-ui-assets/elements/sign-up/google-icon-sign-up.svg') alt)
                   span Sign in with Google
